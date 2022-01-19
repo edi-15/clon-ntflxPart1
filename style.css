@@ -1,5 +1,3 @@
-/*BETA*/
-
 :root {
     --bgTwo: #e50914;
     --colorText: #fff; 
@@ -17,8 +15,7 @@ body {
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
-    /*min-width: 100%;*/
-    min-width: 437px;
+    min-width: 100%;
     max-width: 100%;
     overflow-x: hidden;
     
@@ -27,8 +24,8 @@ body {
 
 .container {
     /* min-width: 450px; */
-    /*min-width: 100%;
-    max-width: 100%;*/
+    min-width: 437px;
+    max-width: 100%;
 }
 /* 
 .c-slc {
@@ -283,14 +280,7 @@ button {
 }
 
 
-.powered {
-    font-size: 16px;
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    right: 0;
-    font-family: 'Courier New', Courier, monospace;
-}
+
 /*CARD TWO*/
 
 
@@ -347,6 +337,8 @@ button {
     background-color: black;
     text-align: center;
     color: var(--colorText);
+    position: relative;
+    padding: 40px;
 }
 
 .title-three-h1 {
@@ -375,7 +367,8 @@ button {
     grid-template-columns: 10% 50% 60%;
     align-items: center;
     /* width: 400px; */
-    width: 70%;
+    /* width: 70%; */
+    width: 80%;
     border: 2px solid rgba(255,255,255,.25);
     margin: auto;
     border-radius: 0.75rem;
@@ -421,4 +414,18 @@ button {
         width: 100%;
     }
 }
+
+@media (max-width: 470px) {
+    .content-info-dowload-three {
+        grid-template-columns: 10% 60% 40%;
+    }
+}
 /*CARD THREE*/
+
+
+.powered {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    z-index: 5;
+    margin: 20px 0 -10px 0;
+}
