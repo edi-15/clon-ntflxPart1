@@ -246,6 +246,9 @@ button {
 
 
 @media (max-width: 678px ) {
+    body {
+        height: 520px;
+    }
     .video-card-two {
         top: 75px;
     }
