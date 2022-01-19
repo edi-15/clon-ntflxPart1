@@ -1,0 +1,255 @@
+:root {
+    --bgTwo: #e50914;
+    --colorText: #fff; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 450px;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+
+
+
+
+
+.header-indx {
+    /* display: flex; */
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/8c655042-49c9-467f-bd27-7b5b5219a194/CL-es-20220111-popsignuptwoweeks-perspective_alpha_website_small.jpg');
+    color: white !important;
+    height: 500px;
+    /* background-color: radiant rgb(0, 0, 0, 0.4) !important; */
+    border-bottom: 10px solid rgb(21,22,32);
+    height: 85vh;
+}
+
+.cnt {
+    background-color: rgb(0, 0,0, 0.5) ;
+    height: 100%;
+    padding: 20px 0;
+}
+
+/*NAV*/
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px;
+    /* margin: 5px 0; */
+}
+
+span.logo svg {
+    width: 150px;
+    /* display: inline-block; */
+    fill: var(--bgTwo);
+}
+
+.up-nv {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.up-nv .c-slc {
+    margin: 10px;
+}
+.fa-globe-americas {
+    color: var(--colorText);
+}
+
+select {
+    background: none;
+    color: var(--colorText);
+    border: none;
+    outline: none;
+}
+
+select option {
+    background: rgba(0,0,0,.4);
+    color: var(--colorText);
+}
+
+.login-button-nav {
+    background: var(--bgTwo) ;
+    color: var(--colorText);
+    text-decoration: none;
+    padding: 6px;
+    border-radius: 3px;
+}
+
+
+
+.c-slc {
+    width: fit-content;
+    padding: 5px;
+    border: 1px solid white;
+
+}
+
+
+/*NAV*/
+
+/*HEADER PRINCIPAL*/
+
+
+.header-principal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 30px 10px;
+    
+}
+
+
+.title-h1 {
+    line-height: 1.1;
+    font-weight: 900;
+}
+
+.title-h2 {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.form-title {
+    /* margin: 0 auto !important; */
+    font-weight: 400;
+}
+
+.title-h1, .title-h2, .form-title {
+    /* margin: 7px 0; */
+    margin: 10px 2px;
+}
+
+.register-form-index {
+    width: 100%;
+}
+
+.cInput-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.register-form-index  input[type=text]{
+    width: 60%;
+    height: 60px;
+    border: none;
+    background: var(--colorText);
+    outline: none;
+    padding: 2px 15px;
+    font-size: 15px;
+}
+
+button {
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--bgTwo);
+    border: none;
+    color: var(--colorText);
+    height: 60px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+@media (min-width: 678px) {
+    .cInput-button {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .register-form-index  input[type=text]{
+        max-width: 42%;
+        font-size: 20px;
+    }
+    button {
+        font-size: 20px;
+    }
+}
+
+/*HEADER PRINCIPAL*/
+
+/*CARD TWO*/
+
+
+.card-two {
+    width: 100%;
+    /* height: 400px; */
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: relative;
+}
+
+.cnt-two {
+    /* position: absolute; */
+    top: 40px;
+    width: 100%;
+    margin: auto;
+}
+
+.title-two-h1 {
+    margin: 10px 2px;
+}
+
+.title-two-h2 {
+    margin: 15px 20px;
+    font-size: 19px;
+    font-weight: 100;
+}
+
+.content-image-video {
+    position: relative;
+    width: 100%;
+}
+
+
+.image-card-two {
+    z-index: 2;
+    position: relative;
+    /* width: 100%; */
+}
+
+.video-card-two {
+    position: absolute;
+    /* padding-top: 100px; */
+    top: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
+.powered {
+    font-size: 16px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+/*CARD TWO*/
+
+
+@media (max-width: 678px ) {
+    .video-card-two {
+        top: 75px;
+    }
+    .image-card-two {
+        width: 100%;
+    }
+}
