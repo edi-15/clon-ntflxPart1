@@ -1,6 +1,9 @@
+/*BETA*/
+
 :root {
     --bgTwo: #e50914;
     --colorText: #fff; 
+    --color-Text-s: #0071eb; 
 }
 
 * {
@@ -10,14 +13,29 @@
 }
 
 body {
-    min-width: 450px;
+    /* min-width: 450px; */
     font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
+    min-width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
+    
 }
 
 
+.container {
+    /* min-width: 450px; */
+    min-width: 100%;
+    max-width: 100%;
+}
+/* 
+.c-slc {
+    min-width: 101px;
+}
+.login-button-nav {
+    min-width: 103px;
+} */
 
 
 
@@ -27,32 +45,43 @@ body {
     background: url('https://assets.nflxext.com/ffe/siteui/vlv3/9737377e-a430-4d13-ad6c-874c54837c49/8c655042-49c9-467f-bd27-7b5b5219a194/CL-es-20220111-popsignuptwoweeks-perspective_alpha_website_small.jpg');
     color: white !important;
     height: 500px;
+    min-height: 600px;
     /* background-color: radiant rgb(0, 0, 0, 0.4) !important; */
     border-bottom: 10px solid rgb(21,22,32);
-    height: 85vh;
+    max-height: 700px;
 }
 
 .cnt {
-    background-color: rgb(0, 0,0, 0.5) ;
+    /* background-color: rgb(0, 0,0, 0.5) ; */
     height: 100%;
     padding: 20px 0;
+    background: linear-gradient(
+180deg
+, rgb(0,0,0, 0.8), rgb(0,0,0, 0.6));
 }
 
 /*NAV*/
 
 .nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 5px;
-    /* margin: 5px 0; */
+    margin: 5px 30px;
+    /*beta*/
+    /* position: sticky;
+    top: 0;
+    background: linear-gradient(180deg, rgb(0,0,0, 0.8), transparent); */
+    /*beta*/
 }
 
 span.logo svg {
-    width: 150px;
+    width: 130px;
     /* display: inline-block; */
     fill: var(--bgTwo);
+    cursor: pointer;
 }
+
 
 .up-nv {
     display: flex;
@@ -73,6 +102,7 @@ select {
     color: var(--colorText);
     border: none;
     outline: none;
+    cursor: pointer;
 }
 
 select option {
@@ -107,14 +137,17 @@ select option {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 30px 10px;
-    
+    /* margin: 30px 10px; */
+    margin: 40px 10px;
 }
 
 
 .title-h1 {
-    line-height: 1.1;
-    font-weight: 900;
+    /* line-height: 1.1; */
+    /* font-weight: 900; */
+    font-size: 3.125rem;
+    max-width: 60%;
+    margin: auto !important;
 }
 
 .title-h2 {
@@ -164,7 +197,19 @@ button {
     cursor: pointer;
 }
 
-@media (min-width: 678px) {
+@media (min-width: 800px) {
+    .title-h1 {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 900px) {
+    .header-indx {
+        height: 650px;
+    }
+    .title-h1 {
+        max-width: 60%;
+    }
     .cInput-button {
         width: 90%;
         margin: 20px auto;
@@ -184,15 +229,18 @@ button {
 
 
 .card-two {
+    position: relative;
     width: 100%;
     /* height: 400px; */
-    height: 800px;
+    height: 700px;
+    max-height: 800px;
     display: flex;
     flex-direction: column;
     text-align: center;
     background-color: black;
     color: white;
-    position: relative;
+    border-bottom: 10px solid rgb(21,22,32);
+
 }
 
 .cnt-two {
@@ -246,8 +294,21 @@ button {
 
 
 @media (max-width: 678px ) {
-    body {
-        height: 520px;
+    .header-indx {
+        height: 540px;
+        min-height: 540px
+    }
+    .title-h1 {
+        font-size: 1.90rem;
+        max-width: 100%;
+    }
+    .title-h2 {
+        max-width: 85%;
+        margin: 10px auto !important;
+    }
+    .form-title {
+        max-width: 450px;
+        margin: 10px auto !important;
     }
     .video-card-two {
         top: 75px;
@@ -255,7 +316,108 @@ button {
     .image-card-two {
         width: 100%;
     }
-        video {
+    video {
+        width: 100%;
+    }
+    .cInput-button {
+        flex-direction: column;
+    }
+    .register-form-index input[type=text] {
+        width: 70%;
+        height: 46px;
+        margin: 10px auto;
+    }
+    button {
+        min-width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    .card-two {
+        height: 600px;
+    }
+}
+
+
+
+/*CARD THREE*/
+
+
+.card-three {
+    background-color: black;
+    text-align: center;
+    color: var(--colorText);
+}
+
+.title-three-h1 {
+    /* font-size: 2.5rem; */
+}
+
+
+.title-three-h2 {
+    margin: 15px 20px;
+    font-size: 19px;
+    font-weight: 100;
+}
+
+
+.content-image-img-card-three {
+    position: relative;
+}
+
+.content-info-dowload-three {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    display: grid;
+    grid-template-columns: 10% 50% 60%;
+    align-items: center;
+    /* width: 400px; */
+    width: 70%;
+    border: 2px solid rgba(255,255,255,.25);
+    margin: auto;
+    border-radius: 0.75rem;
+    padding: 10px 9px;
+}
+
+.content-info-dowload-three img {
+    height: 4em;
+}
+
+
+
+.text-two {
+    color: var(--color-Text-s);
+}
+
+.brd-icon {
+    margin: auto;
+    cursor: pointer;
+}
+
+.fa-arrow-alt-circle-down {
+    font-size: 20px;
+    transform: scale(1.1);
+    color: var(--color-Text-s);
+}
+
+
+.img-three {
+    width: auto;
+}
+
+@media (min-width: 900px ) {
+    .content-info-dowload-three {
+        width: 30%;
+        max-width: 400px;
+    }
+
+}
+
+@media (max-width: 678px) {
+    .img-three {
         width: 100%;
     }
 }
+/*CARD THREE*/
